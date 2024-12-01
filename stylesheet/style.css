@@ -1,0 +1,74 @@
+@keyframes drawer-show-anim{
+    0% {right: 100%;}
+    100% {right: 0%;}
+}
+@keyframes drawer-hide-anim{
+    0% {right: 0%;}
+    100% {right: 100%;}
+}
+.hamburger-btn{
+    line-height: 8px;
+    font-size:50px;
+    margin-left: 20px;
+    display: none;
+}
+
+.offcanvas{
+    background-color: rgb(240, 163, 62);
+}
+.close{
+    display: none;
+}
+.menu-list{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.drawer-show{
+    animation-name: drawer-show-anim;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+}
+.drawer-hide{
+    animation-name: drawer-hide-anim;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+}
+ul, menu{
+    margin: 0px;
+}
+ul{
+    padding: 16px 0px;
+}
+.btn{
+    border: none;
+    background-color: transparent;
+}
+@media only screen and (max-width: 768px) {
+    .offcanvas{
+        background-color: antiquewhite;
+        position: relative;
+        z-index: 1;
+        height: 100vh;
+        width: 80%;
+    }
+    .menu-list{
+        display: unset;
+    }
+    .hide{
+        display: none !important;
+    }
+    .close{
+        display: flex;
+        justify-content: end;
+    }
+    .hamburger-btn{
+        display: unset;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .offcanvas{
+        width: 100%;
+    }
+}
